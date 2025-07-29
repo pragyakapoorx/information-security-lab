@@ -61,7 +61,7 @@ if __name__ == "__main__":
 
         if choice == '1':
             plaintext = input("Please enter plaintext: ")
-            key = int(input("Enter key: "))
+            key = int(input("Enter key "))
             ciphertext = encrypt_additive(plaintext, key)
             print(f"Encrypted text: {ciphertext}")
         elif choice == '2':
