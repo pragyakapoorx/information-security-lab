@@ -18,7 +18,7 @@ def encrypt_autokey(plaintext, key):
 
 if __name__ == "__main__":
     plaintext = input("Please enter plaintext: ")
-    key1 = input("Enter key for Vignere cipher ")
+    key1 = input("Enter key for Vignere cipher: ")
 
 
     key2 = int(input("Enter key for Autokey cipher: "))
