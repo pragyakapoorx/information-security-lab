@@ -3,19 +3,6 @@ Encrypt the message "I am learning information security" using one of the follow
 Ignore the space between words. Decrypt the message to get the original plaintext:
 """
 
-"""
-def encrypt_word_additive(plaintext, key):
-    ciphertext = plaintext      #List
-    alphabet = "abcdefghijklmnopqrstuvwxyz"
-
-    for i in range(len(plaintext)):
-        letter_index = alphabet.index(plaintext[i].lower())
-        ciphertext[i] = alphabet[(letter_index + key)%26]
-
-    ciphertext = "".join(ciphertext)
-    return ciphertext
-"""
-
 #Additive cipher with key = 20
 def encrypt_additive(plaintext, key):
     ciphertext = ""
@@ -73,12 +60,12 @@ if __name__ == "__main__":
         choice = input("Enter choice: ")
 
         if choice == '1':
-            plaintext = list(input("Please enter plaintext: "))
+            plaintext = input("Please enter plaintext: ")
             key = int(input("Enter key: "))
             ciphertext = encrypt_additive(plaintext, key)
             print(f"Encrypted text: {ciphertext}")
         elif choice == '2':
-            plaintext = list(input("Please enter plaintext: "))
+            plaintext = input("Please enter plaintext: ")
             key = int(input("Enter key: "))
             ciphertext = encrypt_multiplicative(plaintext, key)
             print(f"Encrypted text: {ciphertext}")
@@ -93,3 +80,16 @@ if __name__ == "__main__":
 
 
    # print(f"Encrypted text: {ciphertext}")     #TODO why is plaintext getting changed
+
+"""
+def encrypt_word_additive(plaintext, key):
+    ciphertext = plaintext      #List
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+    for i in range(len(plaintext)):
+        letter_index = alphabet.index(plaintext[i].lower())
+        ciphertext[i] = alphabet[(letter_index + key)%26]
+
+    ciphertext = "".join(ciphertext)
+    return ciphertext
+"""
