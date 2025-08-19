@@ -50,8 +50,7 @@ def encrypt_affine(plaintext, key1, key2):
             ciphertext += char
     return ciphertext
 
-if __name__ == "__main__":
-
+def main():
     while True:
         print("\n1. Additive Cipher")
         print("2. Multiplicative Cipher")
@@ -77,6 +76,8 @@ if __name__ == "__main__":
             ciphertext = encrypt_affine(plaintext, key1, key2)
             print(f"Encrypted text: {ciphertext}")
 
+if __name__ == "__main__":
+    main();
 
 
    # print(f"Encrypted text: {ciphertext}")     #TODO why is plaintext getting changed
